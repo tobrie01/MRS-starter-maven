@@ -36,4 +36,19 @@ public class MovieModel {
         moviesToBeViewed.add(movieCreated);
         return movieCreated;
     }
+
+    public void updateMovie(Movie movieToBeUpdated) throws Exception {
+        movieManager.updateMovie(movieToBeUpdated);
+
+        //moviesToBeViewed.set(?,movieToBeUpdated);
+        int indexInList = moviesToBeViewed.indexOf(movieToBeUpdated);
+        moviesToBeViewed.set(indexInList, movieToBeUpdated);
+    }
+
+    public void deleteMovie(Movie selectedMovie) throws Exception {
+        // remove movie in dal layer
+        movieManager.deleteMovie(selectedMovie);
+        // update observable list
+        moviesToBeViewed.remove(selectedMovie);
+    }
 }

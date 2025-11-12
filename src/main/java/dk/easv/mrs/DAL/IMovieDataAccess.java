@@ -8,7 +8,7 @@ public interface IMovieDataAccess {
 
     Movie createMovie(Movie newMovie) throws Exception;
 
-     void updateMovie(Movie movie) throws Exception;
+    void updateMovie(Movie movie) throws Exception;
 
     void deleteMovie(Movie movie) throws Exception;
 

@@ -5,12 +5,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="417.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.mrs.GUI.Controller.MovieViewController">
+<AnchorPane prefHeight="417.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.mrs.GUI.Controller.MovieViewController">
    <children>
       <ListView fx:id="lstMovies" layoutX="11.2" layoutY="118.4" prefHeight="298.0" prefWidth="319.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="118.0" />
       <TextField fx:id="txtTitle" layoutX="10.0" layoutY="14.0" prefHeight="26.0" prefWidth="318.0" promptText="Movie title" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
       <TextField fx:id="txtYear" layoutX="14.0" layoutY="49.0" promptText="Movie year" />
       <TextField fx:id="txtMovieSearch" layoutX="14.0" layoutY="86.0" prefHeight="26.0" prefWidth="318.0" promptText="Search" />
-      <Button fx:id="btnClick" layoutX="216.0" layoutY="49.0" mnemonicParsing="false" onAction="#btnHandleClick" text="Button" />
+      <Button fx:id="btnClick" layoutX="170.0" layoutY="49.0" mnemonicParsing="false" onAction="#btnHandleClick" text="Create" />
+      <Button layoutX="237.0" layoutY="49.0" mnemonicParsing="false" onAction="#onUpdate" text="Update" />
+      <Button layoutX="306.0" layoutY="49.0" mnemonicParsing="false" onAction="#onDelete" text="Delete" />
    </children>
 </AnchorPane>

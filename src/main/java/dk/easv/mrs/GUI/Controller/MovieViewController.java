@@ -38,6 +38,16 @@ public class MovieViewController implements Initializable {
     {
         lstMovies.setItems(movieModel.getObservableMovies());
 
+
+        lstMovies.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, selectedMovie) ->
+        {
+            if (selectedMovie != null) {
+                txtTitle.setText(selectedMovie.getTitle());
+                txtYear.setText(selectedMovie.getYear() + "");
+            }
+
+        });
+
         txtMovieSearch.textProperty().addListener((observableValue, oldValue, newValue) -> {
             try {
                 movieModel.searchMovie(newValue);
@@ -73,5 +83,44 @@ public class MovieViewController implements Initializable {
         Movie newMovie = new Movie(-1, year, title);
 
         movieModel.createMovie(newMovie);
+    }
+
+    @FXML
+    private void onUpdate(ActionEvent actionEvent) throws Exception {
+        Movie selectedMovie = lstMovies.getSelectionModel().getSelectedItem();
+
+        if (selectedMovie != null) {
+
+            // update movie based on textfield inputs from user
+            selectedMovie.setTitle(txtTitle.getText());
+            selectedMovie.setYear(Integer.parseInt(txtYear.getText()));
+
+            // Update movie in DAL layer (through the layers)
+            try {
+                movieModel.updateMovie(selectedMovie);
+            }
+            catch (Exception err){
+                displayError(err);
+            }
+
+            // ask controls to refresh their content
+            lstMovies.refresh();
+        }
+    }
+
+
+    @FXML
+    private void onDelete(ActionEvent actionEvent) {
+        Movie selectedMovie = lstMovies.getSelectionModel().getSelectedItem();
+
+        if (selectedMovie != null) {
+            try {
+                movieModel.deleteMovie(selectedMovie);
+            }
+            catch (Exception err){
+                displayError(err);
+            }
+
+        }
     }
 }
