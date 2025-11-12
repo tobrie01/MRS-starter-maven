@@ -14,11 +14,11 @@ public class Movie {
 
     public int getId() {
         return id;
-    }
+    } // getter
 
     public String getTitle() {
         return title;
-    }
+    }  //setter
 
     public void setTitle(String title) {
         this.title = title;

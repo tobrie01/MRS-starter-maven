@@ -3,11 +3,11 @@ import dk.easv.mrs.BE.Movie;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MovieDAO_Mock implements IMovieDataAccess {
+ /*public class MovieDAO_Mock implements IMovieDataAccess {
 
     private List<Movie> allMovies;
 
-    public MovieDAO_Mock()
+    public MovieDAO_Mock() // fake list så når vi trykker start så får vi den i stedet for den lange liste
     {
         allMovies = new ArrayList<>();
         allMovies.add(new Movie(1, 1991,"Terminator 2"));
@@ -16,7 +16,8 @@ public class MovieDAO_Mock implements IMovieDataAccess {
     }
 
     @Override
-    public List<Movie> getAllMovies() {
+    public List<Movie> getAllMovies() // getter det får alle filme af listen
+    {
         return allMovies;
     }
 
@@ -35,4 +36,4 @@ public class MovieDAO_Mock implements IMovieDataAccess {
 
     }
 
-}
+}*/
