@@ -1,4 +1,4 @@
-package dk.easv.mrs.DAL;
+//package dk.easv.mrs.DAL;
 import dk.easv.mrs.BE.Movie;
 import java.util.ArrayList;
 import java.util.List;

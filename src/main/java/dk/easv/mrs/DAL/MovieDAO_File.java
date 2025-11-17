@@ -1,4 +1,4 @@
-package dk.easv.mrs.DAL;
+/*package dk.easv.mrs.DAL;
 
 // Java imports
 import java.io.*;
@@ -116,4 +116,4 @@ public class MovieDAO_File implements IMovieDataAccess {
             throw new Exception("An error occurred");
         }
     }
-}
+}*/

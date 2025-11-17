@@ -1,7 +1,11 @@
-package dk.easv.mrs.GUI.Controller;
 
+// package imports
+package dk.easv.mrs.GUI.Controller;
+// project imports
 import dk.easv.mrs.BE.Movie;
 import dk.easv.mrs.GUI.Model.MovieModel;
+
+// Java imports
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
